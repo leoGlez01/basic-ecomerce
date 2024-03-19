@@ -1,0 +1,204 @@
+/*Scrollbar Styles*/
+.box::-webkit-scrollbar {
+    width: 5px;
+}
+
+.box::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.box::-webkit-scrollbar-thumb {
+    background-color: rgb(210, 210, 216);
+    border: none;
+    border-radius: 20px;
+}
+
+/*Global Styles*/
+body {
+    background-color: #232133;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Plus Jakarta Display', sans-serif;
+    color: #a095f9;
+    font-size: 3em;
+}
+
+h3 {
+    font-family: 'Plus Jakarta Display', sans-serif;
+    font-size: 3em;
+    color: #fff;
+}
+
+p {
+    font-family: 'Roboto Regular';
+    font-size: 2em;
+    color: #fff;
+}
+
+a {
+    height: 100%;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Roboto Regular';
+    font-size: 20px;
+}
+
+button {
+    margin: 0 0 20px 0;
+    background-color: #33304f;
+    border: none;
+    border-radius: 5px;
+    width: 120px;
+    height: 40px;
+    color: #fff;
+}
+
+button:hover {
+    color: black;
+    background-color: rgb(231, 144, 231);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+/*Generic Style for Horizontal Bars*/
+.bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 15%;
+}
+
+input,
+textarea,
+select {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 3px;
+    border: none;
+    font-family: 'Roboto Regular', sans-serif;
+    font-size: 18px;
+}
+
+input:focus {
+    outline: none;
+}
+
+
+/*Specific Styles for our classes*/
+
+.main-content {
+    padding: 30px;
+    width: 80%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+#search {
+    margin-top: 10px;
+    width: 55%;
+    height: 50%;
+}
+
+#go {
+    width: 20%;
+    height: 50%;
+    margin-left: 30px;
+    border-radius: 5px;
+    background-color: #33304f;
+}
+
+#go:hover {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 70%;
+    margin-top: 20px;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    text-wrap: wrap;
+}
+
+.action-task {
+    width: 20%;
+    height: 100%;
+}
+
+
+.ver {
+    margin: 0;
+}
+
+.carrito img {
+    margin-left: 20px;
+    width: 30px;
+    height: 30px;
+}
+
+.ver:hover {
+    color: rgb(28, 44, 59);
+}
+
+.comprar {
+    background-color: #33304f;
+    border: none;
+    border-radius: 5px;
+    width: 120px;
+    height: 40px;
+    color: #fff;
+}
+
+.cancelar {
+    background-color: #33304f;
+    border: none;
+    border-radius: 5px;
+    width: 120px;
+    height: 40px;
+    color: #fff;
+}
+
+.cancelar:hover {
+    cursor: pointer;
+    background-color: rgb(231, 144, 231);
+    color: #000;
+}
+
+.comprar:hover {
+    cursor: pointer;
+    background-color: rgb(231, 144, 231);
+    color: #000;
+}
+
+#delete:hover {
+    color: red;
+}

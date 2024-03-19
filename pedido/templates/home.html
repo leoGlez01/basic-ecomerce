@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="box" id="box">
+    {% for producto in productos %}
+    <div style="height: 20%;" class="product bar">
+        <p style="margin-left:20px;">{{producto.nombre}}: {{producto.precio}}</p>
+
+        <form class="action-task bar" method="post" action="{% url 'agregar' producto.id %}">
+            {% csrf_token %}
+            <button class="ver" type="submit">Agregar</button>
+        </form>
+    </div>
+    <br>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'styles.css' %}">
+
+<body>
+    <div class="main-content">
+        {% include 'topbar.html' %}
+
+        {% block content %}
+
+        {% endblock %}
+
+    </div>
+    <script src="{% static 'scripts/main.js' %}"></script>
+</body>

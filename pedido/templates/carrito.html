@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+{% for elemento in elementos_carrito %}
+<div class="box">
+    <div style="width: 100% ;display: flex; flex-direction: row; justify-content: space-between; align-items: center;"
+        class="carrito-ver">
+        <h2 style="font-size: 24px; color: #fff;">{{ elemento.producto.nombre }}</h2>
+        <p style="font-size: 16px;">{{ elemento.cantidad }}</p>
+        <a id="delete" href="{% url 'eliminar' elemento.id %}">Quitar</a>
+    </div>
+    {% endfor %}
+</div>
+<div style="width: 90% ;display: flex; flex-direction: row; justify-content: space-between; align-items: center;"
+    class="acciones">
+    <form action="{% url 'comprar' %}" method="post">
+        {% csrf_token %}
+        <input type="submit" value="Comprar" class="comprar">
+    </form>
+    <form action="{% url 'cancelar' %}" method="post">
+        {% csrf_token %}
+        <input type="submit" value="Cancelar" class="cancelar">
+    </form>
+</div>
+
+
+{% endblock %}
